@@ -130,22 +130,46 @@ The state for the first agent looks like: [ 0.          0.          0.          
 
 **Average Score per Episodes**
 I have repeated episodes 3000 times with max time step 1000. 
-The Agent solved the environment in 92 episoode with average score 30.05
+The Agent solved the environment in 734 episoode with average score 0.5073
+
 ~~~python
-Episode 10	Average Score: 1.45
-Episode 20	Average Score: 5.00
-Episode 30	Average Score: 13.36
-Episode 40	Average Score: 19.12
-Episode 50	Average Score: 23.07
-Episode 60	Average Score: 25.63
-Episode 70	Average Score: 27.45
-Episode 80	Average Score: 28.79
-Episode 90	Average Score: 29.87
-Episode 92	Average Score: 30.05
-Environment solved in 92 episodes!	Average Score: 30.05
+Episode 100	Average Score: 0.0000
+Episode 200	Average Score: 0.0000
+Episode 300	Average Score: 0.0298
+Episode 400	Average Score: 0.0281
+Episode 500	Average Score: 0.0284
+Episode 600	Average Score: 0.0633
+Episode 700	Average Score: 0.2299
+Episode 734	Average Score: 0.5073
+Environment solved in 734 episodes!	Average Score: 0.5073
+Episode 800	Average Score: 1.5889
+Episode 900	Average Score: 1.6570
+Episode 1000	Average Score: 1.3845
+Episode 1100	Average Score: 1.6619
+Episode 1200	Average Score: 1.1228
+Episode 1300	Average Score: 1.2341
+Episode 1400	Average Score: 1.1707
+Episode 1500	Average Score: 1.0808
+Episode 1600	Average Score: 0.6444
+Episode 1700	Average Score: 0.7851
+Episode 1800	Average Score: 0.9016
+Episode 1900	Average Score: 0.5076
+Episode 2000	Average Score: 0.4260
+Episode 2100	Average Score: 0.2863
+Episode 2200	Average Score: 0.3154
+Episode 2300	Average Score: 0.3765
+Episode 2400	Average Score: 0.4357
+Episode 2500	Average Score: 0.3468
+Episode 2600	Average Score: 0.4799
+Episode 2700	Average Score: 0.3588
+Episode 2800	Average Score: 0.4167
+Episode 2900	Average Score: 0.4024
+Episode 3000	Average Score: 0.2967
 ~~~
 
 The following is a plot of scores of each episode and average score over 100 episodes.
+Also, it hit the peak at 841 th episode with score 1.93
+
 
 <img src="./img/avg_scores.png">
 
