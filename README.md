@@ -2,6 +2,8 @@
 This is a Collaboration and Competition project of Udacity
 
 
+<img src="img/tennis_env.gif" width="720" height="380" title="Tennis_Environment">
+
 ## Project Details
 This project is one of the udactiy deep reinforcement learning nano degree program. For this project, you will work with [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) environment.
 
