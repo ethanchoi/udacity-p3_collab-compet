@@ -180,3 +180,39 @@ Also, it hit the peak at 841 th episode with score 1.93
 - Try Other Algorithms for better perfomance such as [Trust Region Policy Optimization (TRPO)](https://arxiv.org/abs/1502.05477) and Truncated Natural Policy Gradient (TNPG) and [Proximal Policy Optimization (PPO)](https://arxiv.org/abs/1707.06347). Also explore the recent [Distributed Distributional Deterministic Policy Gradients (D4PG](https://openreview.net/forum?id=SyZipzbCb) algorithm as another method for adapting DDPG for continuous control.
 
 
+## Suggestions and Comments from review
+You may consider the following parameters below to achieve with even better results:
+
+- Try increasing the batch_size to 1024.
+- Try calling the method less frequently (say 5 times every 5-10 timesteps so that more data is collected)
+- Try decreasing your hidden units to 128 and 64 with LeakyReLU() activation on both layers.
+- Use batch normalization for fully connected layer
+
+Here are some ideas to improve the agent’s performance:
+
+- Implementing the [Prioritized Experience Replay](https://arxiv.org/abs/1511.05952) for the DDPG and compare the current results.
+- Implementing and using better RL algorithm such as [D4PG](https://openreview.net/forum?id=SyZipzbCb&noteId=SyZipzbCb).
+
+Some ideas and improvement to speed up the learning and therefore, more time to improve the agents performance are:
+
+- Writing and using a framework, which can be used for an automatized, simplified and faster hyperparameter search.
+    - This framework can include for instance and do not be limited to:
+        - [Grid Search](https://medium.com/@elutins/grid-searching-in-machine-learning-quick-explanation-and-python-implementation-550552200596)
+        - [Random Search](https://en.wikipedia.org/wiki/Random_search)
+        - [Bayesian Optimisation](https://towardsdatascience.com/an-introductory-example-of-bayesian-optimization-in-python-with-hyperopt-aae40fff4ff0)
+    - Run multiple scripts with different parameter in parallel to reduce the hyperparameter search time.
+- Optimise the DDPG algorithm with [replay buffer](https://arxiv.org/abs/1712.01275) and code by:
+    - Using [vectorized commands](https://www.cs.utah.edu/~germain/PPS/Topics/Matlab/vectorized_or_array_operations.html) where possible instead of for loops
+    - Parallelisation and synchronisation of the sampling and learning.
+        - One process can sample a few episodes while the other process can perform the learning.
+
+## Extra Material
+
+You might be interested on the following algorithm and topics about Reinforcement Learning that can also be used to solve the environment:
+
+- [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/pdf/1706.02275.pdf)
+- [Simple Reinforcement Learning: Asynchronous Actor-Critic Agents (A3C)](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
+- [RL — Proximal Policy Optimization (PPO)](https://medium.com/@jonathan_hui/rl-proximal-policy-optimization-ppo-explained-77f014ec3f12)
+- [Mean Field Multi-Agent Reinforcement Learning](https://arxiv.org/pdf/1802.05438.pdf)
+- [OpenAI Five](https://blog.openai.com/openai-five/)
+- [Curiosity-driven Exploration by Self-supervised Prediction](https://pathak22.github.io/noreward-rl/)
