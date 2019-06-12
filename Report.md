@@ -38,9 +38,9 @@ Ornstein-Uhlenbeck noise parameters (0.15 theta and 0.1 sigma.)
 ~~~
 
 In this model, the most interesting hyper parameter is TAU value which is used for soft updates.<br>
-As the TAU value increases, the average score quickly reaches the Threshold value. 
+As the TAU value increases, the average score quickly reaches the Threshold value.<br> 
 On the other hand, it can also affect the descending speed of its value after reaching the peak.<br>
-Considering this point, it is set to **3e-3**
+After serverl trials, set **3e-3** to TAU value. It's not too fast and too slow.
 
 
 - Actor-Critic Models
@@ -112,7 +112,7 @@ class Critic(nn.Module):
         return self.fc3(x)
 ~~~
 As you can see in the above code snippets, the number of units of hiddenl layers 1,2 is 128, 256 in Actor and Critic Networks.<br>
-Also, the batch normalization was inserted after the first hidden layer, this is also a key to get a reward as quickly as possible.
+Also, the batch normalization was inserted after the first hidden layer, this is also a key to get a reward as quickly as possible.<br>
 If you set the unit size of hidden layers more than 256 in my experiments, for example, 256,512, it was very hard to get a score within 1000 episode.
 
 ## Experiment Results
@@ -167,7 +167,7 @@ Episode 2900	Average Score: 0.4024
 Episode 3000	Average Score: 0.2967
 ~~~
 
-The following is a plot of scores of each episode and average score over 100 episodes.
+The following is a plot of scores of each episode and average score over 100 episodes.<br>
 Also, it hit the peak at 841 th episode with score 1.93
 
 
