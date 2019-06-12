@@ -129,7 +129,8 @@ The state for the first agent looks like: [ 0.          0.          0.          
  ~~~
 
 **Average Score per Episodes**
-I have repeated episodes 3000 times with max time step 1000. 
+
+I have repeated episodes 3000 times with max time step 1000.<br>
 The Agent solved the environment in 734 episoode with average score 0.5073
 
 ~~~python
